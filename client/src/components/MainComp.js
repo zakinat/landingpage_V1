@@ -23,7 +23,7 @@ const MainComp = () => {
                         <UserDashboard/>
                     </>
                     ) : (
-                    <Redirect to="login" />
+                    <Redirect to="register" />
                     )}
                 </Route>
                 <Route exact path="/register">
