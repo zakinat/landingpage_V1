@@ -1,6 +1,6 @@
 # landingPage | MERN
 
-A React  Full-stack app for showing landing page to register as a new user or sign in.
+A React  Front-stack app for showing landing page to register as a new user or sign in.
 
 ## Built using
 
@@ -10,9 +10,9 @@ A React  Full-stack app for showing landing page to register as a new user or si
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) -SimpleSchema validates JavaScript objects to ensure they match a schema
 - [react-hook-form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 - [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) - to route through the links 
-- [fontawesom](https://fontawesome.com) - https://www.npmjs.com/package/yup 
-- [react-redux](https://www.npmjs.com/package/yup) - https://www.npmjs.com/package/yup 
-- [axios](https://www.npmjs.com/package/yup) - https://www.npmjs.com/package/yup
+- [fontawesom](https://fontawesome.com) - a svg library 
+- [react-redux](https://react-redux.js.org) - Designed to work with React's component model. You define how to extract the values your component needs from Redux, and your component updates automatically as needed. 
+- [axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
 - [yup](https://www.npmjs.com/package/yup) - Yup is a JavaScript schema builder for value parsing and validation.
 
 
