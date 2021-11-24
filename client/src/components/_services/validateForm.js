@@ -17,12 +17,22 @@ const validationRegisterForm = Yup.object().shape({
     lan: Yup.string()
     .oneOf(option, 'Field must be checked'),
     usageCondition: Yup.bool().oneOf([true], 'Field must be checked'),
-    pass1: Yup.string()
+    password: Yup.string()
         .min(6, 'Password must be at least 6 characters')
         .required('Password is required'),
-    confpass1: Yup.string()
-        .oneOf([Yup.ref('pass1'), null], 'Passwords must match')
+    confpassword: Yup.string()
+        .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Confirm Password is required'),
 })
 
-export {validationRegisterForm}
+
+const validationLoginForm = Yup.object().shape({
+    email: Yup.string()
+        .required('Email is required')
+        .email('Email is invalid'),
+    password: Yup.string()
+        .min(6, 'Password must be at least 6 characters')
+        .required('Password is required'),
+})
+
+export {validationRegisterForm,validationLoginForm}

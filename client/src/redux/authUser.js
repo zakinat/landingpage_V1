@@ -10,8 +10,7 @@ import {
     SET_TOKEN
   } from './actionTypes'
 
-  import {tokenConfig} from '../_services/auth.service'
-  import * as api from '../_services/api.auth'
+  import * as api from '../_api.services/api.auth'
   import {returnErrors} from './error'
 
   //reducers
@@ -71,7 +70,7 @@ const initstate = {
   //actions
 
 //Register User
- const signupUser = ({ displayName, email, password }) => {
+ const signupUser = ({ name, email,tel, password,language }) => {
    return  async (dispatch) => {
     // Headers
     const config = {
@@ -80,7 +79,8 @@ const initstate = {
       }
     }
     // Request body
-  const body = JSON.stringify({ displayName, email, password })
+  const body = JSON.stringify({ name, email,tel, password,language })
+  console.log(body)
   try {
     const {data}=await api.registerUser(body,config)
     dispatch({
@@ -136,7 +136,7 @@ const setToken =()=>{
    } 
     
 // Login User
- const login = ({ email, password }) => {
+ const signinUser = ({ email, password }) => {
    return async (dispatch) => {
     // Headers
     const config = {
@@ -173,5 +173,5 @@ const setToken =()=>{
 }
   
 export default authUser
-export {logout,login,loadUser,signupUser,setToken}
+export {logout,signinUser,loadUser,signupUser,setToken}
  

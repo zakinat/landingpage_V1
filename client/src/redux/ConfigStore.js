@@ -5,6 +5,7 @@ import thunk from "redux-thunk"
 //reducers
 
 import authUser from "./authUser"
+import error from "./error"
 
 
 const middleWare = [thunk]
@@ -15,6 +16,7 @@ export const ConfigureStore = () => {
 const store = createStore(
   combineReducers({
     authUser,
+    error,
   }),
   composeWithDevTools(applyMiddleware(...middleWare))
 )
