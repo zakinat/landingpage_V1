@@ -1,6 +1,6 @@
 # landingPage | MERN
 
-A React  Front-stack app for showing landing page to register as a new user or sign in.
+A React  Full-stack app for showing landing page to register as a new user or sign in with some validation.
 
 ## Built using
 
