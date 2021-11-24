@@ -32,9 +32,9 @@ form {
 }
     
 
-    input[type=text]:focus,
-    input[type=email]:focus,
-    input[type=tel]:focus,
+    input[type='text']:focus,
+    input[type='email']:focus,
+    input[type='tel']:focus,
     select:focus,
     textarea:focus {
        outline: none !important;
@@ -145,4 +145,38 @@ form {
             line-height: 22px;
     }
     margin-bottom:30px;
+}
+
+
+.passInput{
+        border: 1px solid #DBE2EA;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+        border-radius: 6px;
+        display: block;
+        font-size: 1rem;
+        height: 45px;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        color:$primary-color;
+        align-items: center;
+  input[type='password'],
+  input[type='text'],
+  input[type='password']:focus,
+  input[type='text']:focus{
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+  }
+  
+span{
+  margin-right: 20px;
+}
+}
+.passInput:focus-within{
+  outline: none !important;
+  border: 2px solid #0880AE;
 }

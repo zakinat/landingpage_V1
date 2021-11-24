@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useForm } from "react-hook-form"
 import { Link} from 'react-router-dom'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -6,19 +6,21 @@ import { yupResolver } from '@hookform/resolvers/yup'
 //copmonents
 import  TxtFld  from '../_control/TxtFld'
 import Select from '../_control/Select'
-
-
-
+import PasswordFld from '../_control/PasswordFld'
 //helper
 import {lan_opt} from '../_helper/selectionArray'
 import {validationRegisterForm} from '../_services/validateForm'
 const Register = () => {
-
+    //handling  form validation
     const {register, handleSubmit, formState ,errors} = useForm({
         mode: "onChange",
         resolver: yupResolver(validationRegisterForm)
       });
 
+      //handling showing Password
+      const [showPassword,setShowPassword]=useState(false)
+      const showPass={showPassword,setShowPassword}
+    //handling sumbting form
     const onSubmit= (userInfo)=>{
         
         console.log(userInfo)
@@ -39,6 +41,12 @@ const Register = () => {
                     </div>
                     <div className="form-control">
                         <TxtFld register={register} label={'Номер телефона'} inpt_plcholder={'Введите номер телефона'} inpt_type={'tel'} inpt_name={'tel'} errorobj={errors}/>
+                    </div>
+                    <div className="form-control">
+                        <PasswordFld register={register} label={'Пароль'} inpt_plcholder={'Введите пароль'}  inpt_name={'pass1'} showPass={showPass} icon={true}  errorobj={errors}/>
+                    </div>
+                    <div className="form-control">
+                        <PasswordFld register={register} label={'Пароль'} inpt_plcholder={'Введите пароль'}  inpt_name={'confpass1'} showPass={showPass} icon={false}  errorobj={errors}/>
                     </div>
                     <div className="form-control">
                         <Select register={register} slt_plcholder={'Язык'} label={'Язык'} name={'lan'} options={lan_opt}/>

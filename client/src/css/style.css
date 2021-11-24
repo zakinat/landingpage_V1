@@ -39,9 +39,9 @@ form select {
   background-color: #fff;
 }
 
-form input[type=text]:focus,
-form input[type=email]:focus,
-form input[type=tel]:focus,
+form input[type='text']:focus,
+form input[type='email']:focus,
+form input[type='tel']:focus,
 form select:focus,
 form textarea:focus {
   outline: none !important;
@@ -200,6 +200,48 @@ form input[type="checkbox"]:checked {
   font-weight: 400;
   font-size: 1rem;
   line-height: 22px;
+}
+
+.passInput {
+  border: 1px solid #DBE2EA;
+  -webkit-box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+          box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+  display: block;
+  font-size: 1rem;
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #0880AE;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.passInput input[type='password'],
+.passInput input[type='text'],
+.passInput input[type='password']:focus,
+.passInput input[type='text']:focus {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.passInput span {
+  margin-right: 20px;
+}
+
+.passInput:focus-within {
+  outline: none !important;
+  border: 2px solid #0880AE;
 }
 
 *,
