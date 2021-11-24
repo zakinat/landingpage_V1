@@ -10,6 +10,8 @@ import PasswordFld from '../_control/PasswordFld'
 //helper
 import {lan_opt} from '../_helper/selectionArray'
 import {validationRegisterForm} from '../_services/validateForm'
+
+
 const Register = () => {
     //handling  form validation
     const {register, handleSubmit, formState ,errors} = useForm({

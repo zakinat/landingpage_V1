@@ -16,8 +16,13 @@ const validationRegisterForm = Yup.object().shape({
         .matches(/^([+]?[0-9]{1}-?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{2}-?[0-9]{2})$/, "Only 11 digits, '(' ')' and '+'  are allowed for this field "),
     lan: Yup.string()
     .oneOf(option, 'Field must be checked'),
-    usageCondition: Yup.bool().oneOf([true], 'Field must be checked')
-        
+    usageCondition: Yup.bool().oneOf([true], 'Field must be checked'),
+    pass1: Yup.string()
+        .min(6, 'Password must be at least 6 characters')
+        .required('Password is required'),
+    confpass1: Yup.string()
+        .oneOf([Yup.ref('pass1'), null], 'Passwords must match')
+        .required('Confirm Password is required'),
 })
 
 export {validationRegisterForm}
