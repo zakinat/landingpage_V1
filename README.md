@@ -10,7 +10,6 @@ A React  Full-stack app for showing landing page to register as a new user or si
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) -SimpleSchema validates JavaScript objects to ensure they match a schema
 - [react-hook-form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 - [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) - to route through the links 
-- [yup](https://www.npmjs.com/package/yup) - vali
 - [fontawesom](https://fontawesome.com) - https://www.npmjs.com/package/yup 
 - [react-redux](https://www.npmjs.com/package/yup) - https://www.npmjs.com/package/yup 
 - [axios](https://www.npmjs.com/package/yup) - https://www.npmjs.com/package/yup
